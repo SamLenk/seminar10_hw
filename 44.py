@@ -14,7 +14,7 @@ one_hot_data = pd.get_dummies(data['whoAmI'])
 print("\nDataFrame в формате one hot с использованием get_dummies:")
 print(one_hot_data.head())
 
-# Если нужно выполнить это без использования get_dummies, можно использовать метод pd.concat() в комбинации с pd.Series()
+# Без использования get_dummies
 one_hot_data = pd.concat([pd.Series(1, index=data.index, name='robot'), pd.Series(0, index=data.index, name='human')], axis=1)
 print("\nDataFrame в формате one hot без использования get_dummies:")
 print(one_hot_data.head())
